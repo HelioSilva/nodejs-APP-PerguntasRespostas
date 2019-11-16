@@ -16,10 +16,13 @@ router.get('/status',(req,res)=>{
 });
 
 router.post('/insertConcurso',control.store);
+router.post('/addDeviceConcurso/:id',control.addParticipante);
 router.get('/showConcursos',control.show);
 router.get('/showConcursos/:id',control.showOnce);
+router.post('/duplicidadeParticipacao/:id',control.duplicidade) ;
 
 router.post('/insertUser', controllerUser.store);
+router.post('/setScore',controllerUser.setScore);
 router.get('/showUsers' , controllerUser.show) ;
 router.get('/showUsers/:id', controllerUser.showOnce);
 

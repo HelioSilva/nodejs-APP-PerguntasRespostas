@@ -6,8 +6,8 @@ const ConcursoSchema = new mongoose.Schema({
     senha: Number ,
     participantes :[
         {
-            userID:String,
-            userNome: String,
+            device:String,
+            nome: String,
             score: Number 
         }
     ],    
@@ -19,7 +19,8 @@ const ConcursoSchema = new mongoose.Schema({
                 numAlternativa: Number,
                 descricaoAlternativa:String
             }],
-            numAlternativaCorreta: Number
+            numAlternativaCorreta: Number,
+            numAlternativaEscolhida: Number
         }
     ]
        
